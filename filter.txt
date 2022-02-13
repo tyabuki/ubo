@@ -1,0 +1,26 @@
+! Title: ubo-filter
+! Homepage: https://github.com/tyabuki/ubo
+! Licence: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+! Version: 20220214-2
+
+! youtubeの ミックスリスト, shorts, おすすめ等を非表示にする
+! top
+www.youtube.com##ytd-rich-item-renderer #video-title:has-text(/ミックスリスト/):upward(ytd-rich-item-renderer)
+www.youtube.com##ytd-rich-item-renderer #video-title:has-text(/#Short/i):upward(ytd-rich-item-renderer)
+
+! watch
+www.youtube.com##ytd-compact-radio-renderer #video-title:has-text(/ミックスリスト/):upward(ytd-compact-radio-renderer)
+www.youtube.com##ytd-compact-video-renderer #video-title:has-text(/#short/i):upward(ytd-compact-video-renderer)
+www.youtube.com##ytd-compact-video-renderer span.ytd-video-meta-block:has-text(あなたへのおすすめ):upward(ytd-compact-video-renderer)
+www.youtube.com##ytd-compact-playlist-renderer .ytd-channel-name:has-text(YouTube):upward(ytd-compact-playlist-renderer)
+
+! result
+www.youtube.com##ytd-radio-renderer ytd-channel-name:has-text(YouTube):upward(ytd-radio-renderer)
+www.youtube.com##ytd-video-renderer a#video-title:has-text(/#short/i):upward(ytd-video-renderer)
+www.youtube.com##ytd-playlist-renderer a:has-text(再生リストの全体を見る):upward(ytd-playlist-renderer)
+www.youtube.com##ytd-shelf-renderer span#title.ytd-shelf-renderer:has-text(あなたへのおすすめ):upward(ytd-shelf-renderer)
+www.youtube.com##ytd-shelf-renderer span#title.ytd-shelf-renderer:has-text(他の人はこちらも視聴しています):upward(ytd-shelf-renderer)
+www.youtube.com##ytd-shelf-renderer span#title.ytd-shelf-renderer:has-text(前に再生した動画):upward(ytd-shelf-renderer)
+www.youtube.com##ytd-horizontal-card-list-renderer #title:has-text(他の人はこちらも検索):upward(ytd-horizontal-card-list-renderer)
+
+
