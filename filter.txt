@@ -1,7 +1,7 @@
 ! Title: ubo-filter
 ! Homepage: https://github.com/tyabuki/ubo
 ! Licence: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-! Version: 20220520-01
+! Version: 20220520-02
 ! youtubeの ミックスリスト, shorts, おすすめ等を非表示にする
 
 ! top
@@ -19,7 +19,7 @@ www.youtube.com##ytd-compact-playlist-renderer .ytd-channel-name:has-text(YouTub
 ! 暫定
 www.youtube.com##ytd-compact-playlist-renderer ytd-playlist-thumbnail:upward(ytd-compact-playlist-renderer)
 ! 2chまとめのようなゴミを消す
-www.youtube.com##ytd-compact-video-renderer yt-formatted-string.ytd-channel-name:has-text(/2ch/i):upward(ytd-compact-video-renderer)
+www.youtube.com##ytd-compact-video-renderer yt-formatted-string.ytd-channel-name:has-text(/2ch|2ちゃんねる/i):upward(ytd-compact-video-renderer)
 ! watch/endscreen
 www.youtube.com##div.ytp-endscreen-content a.ytp-suggestion-set :has-text(/#short/i):upward(a.ytp-suggestion-set)
 www.youtube.com##div.ytp-endscreen-content a.ytp-suggestion-set[data-is-list=true]
