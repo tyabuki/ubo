@@ -1,7 +1,7 @@
 ! Title: ubo-filter
 ! Homepage: https://github.com/tyabuki/ubo
 ! Licence: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-! Version: 20220520-02
+! Version: 20220520-03
 ! youtubeの ミックスリスト, shorts, おすすめ等を非表示にする
 
 ! top
@@ -16,13 +16,14 @@ www.youtube.com##ytd-compact-radio-renderer #video-title:has-text(/ミックス�
 www.youtube.com##ytd-compact-video-renderer #video-title:has-text(/#short/i):upward(ytd-compact-video-renderer)
 www.youtube.com##ytd-compact-video-renderer span.ytd-video-meta-block:has-text(あなたへのおすすめ):upward(ytd-compact-video-renderer)
 www.youtube.com##ytd-compact-playlist-renderer .ytd-channel-name:has-text(YouTube):upward(ytd-compact-playlist-renderer)
-! 暫定
+! 暫定(playlist)
 www.youtube.com##ytd-compact-playlist-renderer ytd-playlist-thumbnail:upward(ytd-compact-playlist-renderer)
-! 2chまとめのようなゴミを消す
-www.youtube.com##ytd-compact-video-renderer yt-formatted-string.ytd-channel-name:has-text(/2ch|2ちゃんねる/i):upward(ytd-compact-video-renderer)
 ! watch/endscreen
 www.youtube.com##div.ytp-endscreen-content a.ytp-suggestion-set :has-text(/#short/i):upward(a.ytp-suggestion-set)
 www.youtube.com##div.ytp-endscreen-content a.ytp-suggestion-set[data-is-list=true]
+! 2chまとめのようなゴミを消す
+www.youtube.com##ytd-compact-video-renderer yt-formatted-string.ytd-channel-name:has-text(/2ch|2ちゃんねる/i):upward(ytd-compact-video-renderer)
+www.youtube.com##div.ytp-endscreen-content a.ytp-suggestion-set span.ytp-videowall-still-info-author:has-text(/2ch|2ちゃんねる/i):upward(a.ytp-suggestion-set)
 
 ! result
 www.youtube.com##ytd-radio-renderer .ytd-channel-name:has-text(YouTube):upward(ytd-radio-renderer)
