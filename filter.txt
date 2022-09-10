@@ -1,7 +1,7 @@
 ! Title: ubo-filter
 ! Homepage: https://github.com/tyabuki/ubo
 ! Licence: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
-! Version: 20220827-1
+! Version: 20220911-1
 ! youtubeの ミックスリスト, shorts, おすすめ等を非表示にする
 
 ! top
@@ -9,6 +9,8 @@ www.youtube.com##ytd-rich-item-renderer #video-title:has-text(/ミックスリ�
 www.youtube.com##ytd-rich-item-renderer #video-title:has-text(/#short/i):upward(ytd-rich-item-renderer)
 www.youtube.com##ytd-rich-section-renderer h2 span#title:has-text(トップニュース):upward(ytd-rich-section-renderer)
 www.youtube.com##ytd-rich-section-renderer h2 span#title:has-text(最新ニュース):upward(ytd-rich-section-renderer)
+www.youtube.com##ytd-rich-section-renderer h2 span#title:has-text(ショート):upward(ytd-rich-section-renderer)
+www.youtube.com##ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope
 www.youtube.com##ytd-rich-section-renderer ytd-inline-survey-renderer:upward(ytd-rich-section-renderer)
 
 ! watch
